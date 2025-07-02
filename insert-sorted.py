@@ -15,6 +15,7 @@ def printList(head):
     while i != None:
         print(i.key, end=' ')
         i = i.next
+    print('\n')
 
 # def insertPos(head,pos,data):
 #     i = 1
@@ -70,11 +71,11 @@ def insertSort(head,data):
     newNode.next = curr.next
     curr.next = newNode
     return head
-# printList(head)
+printList(head)
 # head = None
 # head = insertBeginning(head,40)
-# head = insertEnd(head,50)
-# printList(head)
+head = insertEnd(head,50)
+printList(head)
 # head = insertPos(head,1,70)
-head = insertSort(head,250)
+head = insertSort(head,25)
 printList(head)
