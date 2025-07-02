@@ -23,12 +23,12 @@ def printList(head):
 def delEnd(head):
     if head == None or head.next == None:
         return None
-    else:
-        curr = head
-        while curr.next.next != None:
-            curr = curr.next
-        curr.next = None
-        return head
+    curr = head
+    while curr.next != None:
+        curr = curr.next
+    curr.prev.next = None
+    curr.prev = None
+    return head
         # head.next.prev = None
         # return head.next
     
